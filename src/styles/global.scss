@@ -19,3 +19,7 @@
 body {
     background: var(--gray-900);
 }
+
+body, input, textarea, select, button {
+    font: 400 1rem 'Poppins', sans-serif;
+}
