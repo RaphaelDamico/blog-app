@@ -4,7 +4,7 @@ import logo from '../../../public/images/logo.svg';
 import Link from 'next/link';
 
 export function Header() {
-    return(
+    return (
         <header className={styles.headerContainer}>
            <div className={styles.headerContent}>
                 <a>
@@ -13,18 +13,18 @@ export function Header() {
 
                 <nav>
                     <Link href="/">
-                        <a>Home</a>
+                        Home
                     </Link>
                     <Link href="/posts">
-                        <a>Conteúdos</a>
+                        Conteúdos
                     </Link>
                     <Link href="/sobre">
-                        <a>Quem somos?</a>
+                        Quem somos?
                     </Link>
                 </nav>
 
                 <a className={styles.readyButton} type="button" href="https://sujeitoprogramador.com">COMEÇAR</a>
            </div>
         </header>
-    )
+    );
 }
