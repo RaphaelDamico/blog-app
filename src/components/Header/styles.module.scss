@@ -64,3 +64,25 @@
         filter: brightness(1.1)
     }
 }
+
+@media (max-width: 870px) {
+    .headerContainer {
+        height: 11rem;
+        padding: 0.5rem 0;
+    }
+
+    .headerContent {
+        display: flex;
+        flex-direction: column;
+
+        nav {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .readyButton {
+            display: none;
+        }
+    }
+}
