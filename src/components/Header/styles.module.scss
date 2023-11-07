@@ -3,3 +3,45 @@
     border-bottom: 1px solid var(--gray-200);
     background: var(--gray-700);
 }
+
+.headerContent {
+    max-width: 1120px;
+    height: 6rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+    
+    display: flex;
+    align-items: center;
+
+    img {
+        cursor: pointer;
+    }
+
+    nav {
+        margin-left: 5rem;
+        height: 6rem;
+        
+        a {
+            display: inline-block;
+            position: relative;
+            padding: 0 0.5rem;
+            height: 6rem;
+            line-height: 6rem;
+            color: var(--gray-100);
+            transition: color 0.2s;
+
+            & + a {
+                margin-left: 2rem;
+            }
+
+            &:hover {
+                color: var(--white);
+            }
+
+            &.active {
+                color: var(--yellow-500);
+                font-weight: bold;
+            }
+        }
+    }
+}
