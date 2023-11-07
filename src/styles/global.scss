@@ -16,6 +16,18 @@
     --yellow-500: #FFBE16;
 }
 
+@media (max-width: 1080px) {
+    html {
+        font-size: 93.75%; //Vai gerar mais ou menos 15 pixeis
+    }
+}
+
+@media (max-width: 720px) {
+    html {
+        font-size: 87.5%; //Vai gerar mais ou menos 14 pixeis
+    }
+}
+
 body {
     background: var(--gray-900);
 }
