@@ -19,9 +19,9 @@ export default function Home() {
               COMEÇAR AGORA!
             </button>
           </a>
-
-          <img src="/images/banner-conteudos.png" alt="Conteúdos Sujeito Programador"/>
         </section>
+
+        <img src="/images/banner-conteudos.png" alt="Conteúdos Sujeito Programador"/>
       </div>
     </main>
     </>
