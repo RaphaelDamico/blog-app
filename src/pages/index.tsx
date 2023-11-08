@@ -23,6 +23,17 @@ export default function Home() {
 
         <img src="/images/banner-conteudos.png" alt="Conteúdos Sujeito Programador"/>
       </div>
+
+      <hr className={styles.divisor}/>
+
+      <div className={styles.sectionContent}>
+        <section>
+          <h2>Aprenda a criar aplicativos para Adroid e iOS</h2>
+          <span>Você vai descobrir o jeito mais moderno de desenvolver apps nativos para iOS e Android, construindo aplicativos do zero.</span>
+        </section>
+
+        <img src="/images/financasApp.png" alt="Conteúdos desenvolvimento de apps mobile" />
+      </div>
     </main>
     </>
   )
