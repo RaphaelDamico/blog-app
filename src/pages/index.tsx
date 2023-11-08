@@ -53,7 +53,7 @@ export default function Home() {
         <h2>Mais de <span className={styles.alunos}>15 mil</span> já levaram sua carreira ao próximo nível.</h2>
         <span className={styles.callText}>E você? Vai perder a chance de evoluir de uma vez por todas?</span>
         <a>
-          <button>COMEÇAR AGORA!</button>
+          <button>ACESSAR TURMA!</button>
         </a>
       </div>
     </main>
