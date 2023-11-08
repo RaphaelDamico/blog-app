@@ -11,11 +11,11 @@ export function ActiveLink({ children, activeClassName, ...rest }: ActiveLinkPro
     const { asPath } = useRouter(); // Se ele estiver na página de conteúdos ele vai pegar que ele está no /posts
     const className = asPath === rest.href ? activeClassName  : ''; //Se a rota/pagina for igual ao link que o usuário clicou, então ativamos o className
 
-    return(
-        <Link {...rest}>
+    return (
+        <Link {...rest} legacyBehavior>
             {cloneElement(children, {
                 className
             })}
         </Link>
-    )
+    );
 }
