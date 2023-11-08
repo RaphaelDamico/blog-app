@@ -11,7 +11,7 @@ export default function Home() {
     </Head>
     <main className={styles.container}>
       <div className={styles.containerHeader}>
-        <section>
+        <section className={styles.ctaText}>
           <h1>Levando você ao próximo nível!</h1>
           <span>Uma plataforma com cursos que vão do zero até o profissional na prática, direto ao ponto aplicando o que usamos no mercado de trabalho.</span>
           <a>

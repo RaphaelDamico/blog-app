@@ -1,0 +1,45 @@
+.container {
+    display: block;
+}
+
+.containerHeader {
+    min-height: calc(100vh - 5rem);
+    margin: 0 auto;
+    max-width: 1120px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+        max-width: 640px;
+    }
+}
+
+.ctaText {
+    max-width: 600px;
+
+    h1 {
+        font-size: 3.5rem;
+        line-height: 4.5rem;
+        font-weight: 900;
+        margin-top: 2.5rem;
+        color: var(--white);
+    }
+
+    span {
+        font-size: 1rem;
+        line-height: 2.25rem;
+        color: var(--white);
+    }
+
+    button {
+        background-color: var(--blue-900);
+        border: 0;
+        padding: 1rem 1.8rem;
+        margin-top: 2.5rem;
+        border-radius: 7px;
+        color: var(--white);
+        font-weight: bold
+    }
+}
