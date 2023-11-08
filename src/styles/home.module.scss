@@ -117,7 +117,73 @@
         border-radius: 7px;
         color: var(--white);
         font-weight: bold;
+    }
+}
 
+@media (max-width: 1095px) {
+    .container {
+        .containerHeader {
+            padding: 0 2rem;
 
+            button {
+                display: block;
+            }
+        }
+
+        img {
+            max-width: 600px;
+        }
+
+        div h1 {
+            font-size: 3rem;
+        }
+
+        div h2 {
+            font-size: 2.3rem;
+
+            span {
+                font-size: 2.3rem;
+            }
+        }
+
+        .sectionContent, .footerContent {
+            padding: 0 2rem;
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    .container {
+        .containerHeader {
+            flex-direction: column;
+
+            button {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        div img {
+            max-width: 500px;
+        }
+
+        div h1 {
+            font-size: 3rem;
+        }
+
+        h2 {
+            font-size: 1rem;
+        }
+
+        .sectionContent {
+            flex-direction: column;
+
+            img {
+                margin-top: 2rem;
+                max-width: 400px;
+            }
+        }
     }
 }
