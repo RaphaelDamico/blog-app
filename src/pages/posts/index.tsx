@@ -5,7 +5,8 @@ import Image from 'next/image';
 import thumbImg from '../../../public/images/thumb.png'
 
 export default function Posts() {
-    return <>
+    return ( 
+        <>
             <Head>
                 <title>Blog | Sujeito Programador</title>
             </Head>
@@ -22,6 +23,7 @@ export default function Posts() {
                 </div>
             </main>
         
-    </>;
+        </>
+    );    
          
 }
