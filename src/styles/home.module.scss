@@ -50,3 +50,33 @@
     height: 1px;
     border-color: var(--gray-200);
 }
+
+.sectionContent {
+    margin: 5.5rem auto;
+    max-width: 1120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    section {
+        max-width: 670px;
+    }
+
+    img {
+        max-width: 550px;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+        line-height: 4.5rem;
+        font-weight: 900;
+        margin-top: 2.2rem;
+        color: var(--white);
+    }
+
+    span {
+        font-size: 1rem;
+        line-height: 2.25rem;
+        color: var(--white);
+    }
+}
