@@ -50,7 +50,7 @@ export default function Home() {
 
       <div className={styles.footerContent}>
         <Image src={techsImage} alt="Tecnologias" />
-        <h2>Mais de <span className={styles.alunos}>15 mil</span> já levaram sua carreira ao próximo nível.</h2>
+        <h2>Mais de <span className={styles.alunos}>15 mil</span> já levaram sua carreira para o próximo nível.</h2>
         <span className={styles.callText}>E você? Vai perder a chance de evoluir de uma vez por todas?</span>
         <a>
           <button>ACESSAR TURMA!</button>
