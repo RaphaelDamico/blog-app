@@ -1,12 +1,14 @@
-
+import Head from 'next/head';
+import styles from '../styles/home.module.scss';
 
 
 export default function Home() {
 
   return (
-    <div>
-      <h1>Sujeito Programador</h1>
-    </div>
-
+    <>
+    <Head>
+      <title>Apaixonado por tecnologia- Sujeito Programador</title>
+    </Head>
+    </>
   )
 }
