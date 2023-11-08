@@ -80,3 +80,44 @@
         color: var(--white);
     }
 }
+
+.footerContent {
+    max-width: 1120px;
+    margin: 6rem auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+
+    h2 {
+        font-size: 2.8rem;
+        line-height: 4.5rem;
+        font-weight: 900;
+        color: var(--white);
+    
+        .alunos {
+            font-size: 2.8 rem;
+            line-height: 4.5rem;
+            font-weight: 900;
+            color: var(--blue-900);
+        }
+    }
+    
+    .callText {
+        font-size: 1rem;
+        line-height: 2.25rem;
+        color: var(--white);
+    }
+    
+    button {
+        background-color: var(--blue-900);
+        border: 0;
+        padding: 1rem 1.8rem;
+        margin-top: 2.5rem;
+        border-radius: 7px;
+        color: var(--white);
+        font-weight: bold;
+
+
+    }
+}
