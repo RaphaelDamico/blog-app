@@ -36,6 +36,15 @@ export default function Home() {
       </div>
 
       <hr className={styles.divisor}/>
+
+      <div className={styles.sectionContent}>
+        <img src="/images/webDev.png" alt="Conteúdos desenvolvimento de aplicações web" />
+        
+        <section>
+          <h2>Aprenda a criar sistemas web</h2>
+          <span>Criar sistemas web e sites usando as tecnologias mais modernas e requisitadas pelo mercado.</span>
+        </section>
+      </div>
     </main>
     </>
   )
