@@ -34,6 +34,8 @@ export default function Home() {
 
         <img src="/images/financasApp.png" alt="Conteúdos desenvolvimento de apps mobile" />
       </div>
+
+      <hr className={styles.divisor}/>
     </main>
     </>
   )
