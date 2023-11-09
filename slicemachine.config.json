@@ -1,0 +1,5 @@
+{
+  "repositoryName": "my-blog-api",
+  "adapter": "@slicemachine/adapter-next",
+  "libraries": ["./slices"]
+}
