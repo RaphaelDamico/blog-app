@@ -2,7 +2,8 @@ import styles from './styles.module.scss';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
-import thumbImg from '../../../public/images/thumb.png'
+import thumbImg from '../../../public/images/thumb.png';
+import { FiChevronLeft, FiChevronsLeft, FiChevronRight, FiChevronsRight } from 'react-icons/fi';
 
 export default function Posts() {
     return ( 
@@ -20,6 +21,26 @@ export default function Posts() {
                         <p>Hoje vamos o controle de mostrar a senha no input, uma opção para os nossos formulários de cadastro e login. Mas chega de conversa e bora pro código junto ocmigo que o vídeo está show de bola!</p>
 
                     </Link>
+
+                    <div className={styles.buttonNavigate}>
+                        <div>
+                            <button>
+                                <FiChevronsLeft size={25} color="#FFF"/>
+                            </button>
+                            <button>
+                                <FiChevronLeft size={25} color="#FFF"/>
+                            </button>
+                        </div>
+                        
+                        <div>
+                            <button>
+                                <FiChevronRight size={25} color="#FFF"/>
+                            </button>
+                            <button>
+                                <FiChevronsRight size={25} color="#FFF"/>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </main>
         

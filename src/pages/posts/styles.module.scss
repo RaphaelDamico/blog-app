@@ -52,3 +52,30 @@
         
     }
 }
+
+.buttonNavigate {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+
+    div {
+        display: flex;
+        flex-direction: row;
+    }
+
+    button {
+        margin: 0 5px;
+        border: 0;
+        background: var(--blue-900);
+        color: var(--white);
+        display: flex;
+        padding: 0.5rem;
+        border-radius: 5px;
+    }
+
+    svg {
+        padding: 0 3px;
+    }
+}
