@@ -1,3 +1,4 @@
+import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import styles from '../styles/home.module.scss';
 import Image from 'next/image';
@@ -58,5 +59,7 @@ export default function Home() {
         </div>
       </main>
     </>
-  );
+  )
 }
+
+export const getStaticProps: GetStaticProps
