@@ -33,9 +33,9 @@ export default function Home( { content }: ContentProps) {
       <main className={styles.container}>
         <div className={styles.containerHeader}>
           <section className={styles.ctaText}>
-            <h1>Levando você ao próximo nível!</h1>
-            <span>Uma plataforma com cursos que vão do zero até o profissional na prática, direto ao ponto aplicando o que usamos no mercado de trabalho. 👊</span>
-            <a>
+            <h1>{content.title}</h1>
+            <span>{content.titleContent}</span>
+            <a href={content.linkAction}>
               <button>
                 COMEÇAR AGORA!
               </button>
@@ -49,21 +49,21 @@ export default function Home( { content }: ContentProps) {
 
         <div className={styles.sectionContent}>
           <section>
-            <h2>Aprenda a criar aplicativos para Adroid e iOS</h2>
-            <span>Você vai descobrir o jeito mais moderno de desenvolver apps nativos para iOS e Android, construindo aplicativos do zero.</span>
+            <h2>{content.mobile}</h2>
+            <span>{content.mobileContent}</span>
           </section>
 
-          <img src="/images/financasApp.png" alt="Conteúdos desenvolvimento de apps mobile" />
+          <img src={content.mobileBanner} alt="Conteúdos desenvolvimento de apps mobile" />
         </div>
 
         <hr className={styles.divisor}/>
 
         <div className={styles.sectionContent}>
-          <img src="/images/webDev.png" alt="Conteúdos desenvolvimento de aplicações web" />
+          <img src={content.webBanner} alt="Conteúdos desenvolvimento de aplicações web" />
           
           <section>
-            <h2>Aprenda a criar sistemas web</h2>
-            <span>Criar sistemas web e sites usando as tecnologias mais modernas e requisitadas pelo mercado.</span>
+            <h2>{content.titleWeb}</h2>
+            <span>{content.webContent}</span>
           </section>
         </div>
 
@@ -71,7 +71,7 @@ export default function Home( { content }: ContentProps) {
           <Image src={techsImage} alt="Tecnologias" />
           <h2>Mais de <span className={styles.alunos}>15 mil</span> alunos já levaram sua carreira para o próximo nível.</h2>
           <span className={styles.callText}>E você? Vai perder a chance de evoluir de uma vez por todas?</span>
-          <a>
+          <a href={content.linkAction}>
             <button>ACESSAR TURMA!</button>
           </a>
         </div>
