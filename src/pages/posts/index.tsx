@@ -1,9 +1,9 @@
 import Head from 'next/head';
+import { useState } from 'react';
 import { GetStaticProps } from 'next';
 import styles from './styles.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
-import thumbImg from '../../../public/images/thumb.png';
 import { FiChevronLeft, FiChevronsLeft, FiChevronRight, FiChevronsRight } from 'react-icons/fi';
 import { getPrismicClient } from '../../services/prismic';
 import Prismic from '@prismicio/client'; 
@@ -21,7 +21,10 @@ interface PostsProps {
     posts: Post[];
 }
 
-export default function Posts({ posts }: PostsProps) {
+export default function Posts({ posts: postsBlog }: PostsProps) {
+    
+    const [posts, setPosts] = useState(postsBlog || []);
+    
     return ( 
         <>
             <Head>
@@ -29,14 +32,24 @@ export default function Posts({ posts }: PostsProps) {
             </Head>
             <main className={styles.container}>
                 <div className={styles.posts}>
-                    <Link href="/">
+                    {posts.map( post => (
+                        <Link key={post.slug} href={`/posts/${post.slug}`}>
 
-                        <Image src={thumbImg} alt="Post título 1" width={720} height={410} quality={100}/>
-                        <strong>Criando meu primeiro aplicativo</strong>
-                        <time>08 NOVEMBRO 2023</time>
-                        <p>Hoje vamos o controle de mostrar a senha no input, uma opção para os nossos formulários de cadastro e login. Mas chega de conversa e bora pro código junto ocmigo que o vídeo está show de bola!</p>
+                            <Image 
+                                src={post.cover}
+                                alt={post.title} 
+                                width={720} 
+                                height={410} 
+                                quality={100}
+                                placeholder= "blur"
+                                blurDataURL= "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN0rQcAAQ8AxteRdbQAAAAASUVORK5CYII=+"
+                            />
+                            <strong>{post.title}</strong>
+                            <time>{post.updatedAt}</time>
+                            <p>{post.description}</p>
 
-                    </Link>
+                        </Link>
+                    ))}
 
                     <div className={styles.buttonNavigate}>
                         <div>
