@@ -27,6 +27,47 @@ export default function Posts({ posts: postsBlog, page, totalPage }: PostsProps)
     
     const [currentPage, setCurrentPage] = useState(Number(page));
     const [posts, setPosts] = useState(postsBlog || []);
+
+    //Buacar novos posts
+    async function reqPost(pageNumber: number) {
+        const prismic = getPrismicClient();
+        const response = await prismic.query([
+            Prismic.Predicates.at('document.type', 'post')
+        ],
+        {
+            orderings: '[document.last_publication_date desc]', //Ordenar pelo mais recente
+            fetch: ['post.title', 'post.description', 'post.cover'],
+            pageSize: 3,
+            page: String(pageNumber)  
+        })
+
+        return response;
+    }
+
+    async function navigatePage(pageNumber: number) {
+        const response = await reqPost(pageNumber);
+
+        if(response.results.length === 0) {
+            return; 
+        }
+
+        const getPosts = response.results.map(post => {
+            return {
+                slug: post.uid,
+                title: RichText.asText(post.data.title),
+                description: post.data.description.find(content => content.type === 'paragraph')?.text ?? '',
+                cover: post.data.cover.url,
+                updatedAt: new Date(post.last_publication_date).toLocaleDateString('pt-BR', {
+                    day: '2-digit',
+                    month: 'long',
+                    year: 'numeric'
+                })
+            }
+        })
+
+        setCurrentPage(pageNumber)
+        setPosts(getPosts);
+    }
     
     return( 
         <>
@@ -57,10 +98,10 @@ export default function Posts({ posts: postsBlog, page, totalPage }: PostsProps)
                     <div className={styles.buttonNavigate}>
                         {Number(currentPage) >= 2 && (
                             <div>
-                                <button>
+                                <button onClick= { () => navigatePage(1) }>
                                     <FiChevronsLeft size={25} color="#FFF"/>
                                 </button>
-                                <button>
+                                <button onClick= { () => navigatePage(Number(currentPage - 1)) }>
                                     <FiChevronLeft size={25} color="#FFF"/>
                                 </button>
                             </div>
@@ -68,10 +109,10 @@ export default function Posts({ posts: postsBlog, page, totalPage }: PostsProps)
                         
                         {Number(currentPage) < Number(totalPage) && (
                             <div>
-                                <button>
+                                <button onClick= { () => navigatePage(Number(currentPage + 1)) }>
                                     <FiChevronRight size={25} color="#FFF"/>
                                 </button>
-                                <button>
+                                <button onClick= { () => navigatePage(Number(totalPage)) }>
                                     <FiChevronsRight size={25} color="#FFF"/>
                                 </button>
                             </div>
