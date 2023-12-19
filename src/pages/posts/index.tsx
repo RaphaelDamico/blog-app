@@ -55,23 +55,27 @@ export default function Posts({ posts: postsBlog, page, totalPage }: PostsProps)
                     ))}
 
                     <div className={styles.buttonNavigate}>
-                        <div>
-                            <button>
-                                <FiChevronsLeft size={25} color="#FFF"/>
-                            </button>
-                            <button>
-                                <FiChevronLeft size={25} color="#FFF"/>
-                            </button>
-                        </div>
+                        {Number(currentPage) >= 2 && (
+                            <div>
+                                <button>
+                                    <FiChevronsLeft size={25} color="#FFF"/>
+                                </button>
+                                <button>
+                                    <FiChevronLeft size={25} color="#FFF"/>
+                                </button>
+                            </div>
+                        )}
                         
-                        <div>
-                            <button>
-                                <FiChevronRight size={25} color="#FFF"/>
-                            </button>
-                            <button>
-                                <FiChevronsRight size={25} color="#FFF"/>
-                            </button>
-                        </div>
+                        {Number(currentPage) < Number(totalPage) && (
+                            <div>
+                                <button>
+                                    <FiChevronRight size={25} color="#FFF"/>
+                                </button>
+                                <button>
+                                    <FiChevronsRight size={25} color="#FFF"/>
+                                </button>
+                            </div>
+                        )}
                     </div>
                 </div>
             </main>
