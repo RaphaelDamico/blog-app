@@ -19,13 +19,16 @@ type Post = {
 
 interface PostsProps {
     posts: Post[];
+    page: string;
+    totalPage: string;
 }
 
-export default function Posts({ posts: postsBlog }: PostsProps) {
+export default function Posts({ posts: postsBlog, page, totalPage }: PostsProps) {
     
+    const [currentPage, setCurrentPage] = useState(Number(page));
     const [posts, setPosts] = useState(postsBlog || []);
     
-    return ( 
+    return( 
         <>
             <Head>
                 <title>Blog | Sujeito Programador</title>
@@ -107,7 +110,9 @@ export const getStaticProps: GetStaticProps = async () => {
     
     return {
         props: {
-            posts
+            posts,
+            page: response.page,
+            totalPage: response.total_pages
         },
         revalidate: 60 * 30 //Atualiza a cada 30 minutos.
     }
