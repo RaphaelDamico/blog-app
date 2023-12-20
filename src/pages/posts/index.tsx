@@ -28,7 +28,7 @@ export default function Posts({ posts: postsBlog, page, totalPage }: PostsProps)
     const [currentPage, setCurrentPage] = useState(Number(page));
     const [posts, setPosts] = useState(postsBlog || []);
 
-    //Buacar novos posts
+    //Buscar novos posts
     async function reqPost(pageNumber: number) {
         const prismic = getPrismicClient();
         const response = await prismic.query([
