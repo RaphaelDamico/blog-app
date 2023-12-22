@@ -1,6 +1,6 @@
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
-import Styles from './styles.module.scss';
+import styles from './styles.module.scss';
 import { getPrismicClient } from '../../services/prismic';
 import Prismic from '@prismicio/client';
 import { RichText } from 'prismic-dom';
@@ -26,9 +26,9 @@ export default function Sobre({ content }: ContentProps) {
             <Head>
                 <title>Quem somos? | Sujeito Programador</title>
             </Head>
-            <main className={Styles.container}>
-                <div className={Styles.containerHeader}>
-                    <section className={Styles.ctaText}>
+            <main className={styles.container}>
+                <div className={styles.containerHeader}>
+                    <section className={styles.ctaText}>
                         <h1>{content.title}</h1>
                         <p>{content.description}</p>
 
