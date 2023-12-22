@@ -4,7 +4,7 @@ Na página conteúdos podemos encontrar diversos posts que podem ser vistos um a
 
 <h2>Link para acessar o projeto:</h2> https://blog-app-rho-two.vercel.app/
 
-<h3>Clonar projeto:</h3> https://github.com/RaphaelDamico/projeto-tarefas-plus.git
+<h3>Clonar projeto:</h3> https://github.com/RaphaelDamico/blog-app.git
 
 <h3>Instalar dependências:</h3> npm install
 
